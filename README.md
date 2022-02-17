@@ -124,7 +124,7 @@ Include = /etc/pacman.d/mirrorlist
 ```
 #### Some tools
 ```
-$ sudo pacman -S bash-completion git maim brightnessctl tree openssh
+$ sudo pacman -S bash-completion git maim brightnessctl tree openssh zip unzip
 ```
 #### Video card packages
 ```
@@ -144,6 +144,12 @@ $ echo exec i3 >> .xinitrc
 #### Terminal emulator
 ```
 $ sudo pacman -S rxvt-unicode urxvt-perls
+```
+#### i3 tool to open new terminal in current directory
+```
+$ cd Downloads && curl -LO https://github.com/schischi/xcwd/archive/master.zip
+$ cd xcwd-master && make && sudo make install
+$ cd .. && rm -rf xcwd-master master.zip
 ```
 #### Download my configs
 ```
