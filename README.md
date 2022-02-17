@@ -112,7 +112,7 @@ $ exit
 ```
 $ sudo systemctl enable NetworkManager
 $ reboot
-$ sudo nmcli device wifi connect <SSID> password <password>
+$ sudo nmcli device wifi connect <SSID> password Qwerty123
 ```
 #### Allow pacman multilib
 ```
@@ -124,7 +124,7 @@ Include = /etc/pacman.d/mirrorlist
 ```
 #### Some tools
 ```
-$ sudo pacman -S bash-completion git
+$ sudo pacman -S bash-completion git maim brightnessctl tree openssh
 ```
 #### Video card packages
 ```
@@ -175,26 +175,36 @@ $ vim
 #### Sound settings
 ```
 $ sudo pacman -S pulseaudio pulseaudio-alsa pulseaudio-jack alsa-utils
+$ reboot
+$ alsamixer
+<F5>
+check microphone volume 
 ```
-
-
-
--  maim brightnessctl telegram-desktop tree jdk-openjdk openssh mariadb obs-studio
-- paru -S spotify
-- reboot
-- sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
-- sudo systemctl enable mariadb.service && sudo systemctl start mariadb.service
-- sudo mysql_secure_installation
+#### Spotify
 ```
-ENTER
-n
-Y
-next all Y
+$ paru -S spotify
 ```
-- mysql -u root -p
+#### Telegram
 ```
-MariaDB> CREATE USER 'zerdicorp'@'localhost' IDENTIFIED BY '<password>';
+$ sudo pacman -S telegram-desktop
+```
+#### Obs studio
+```
+$ sudo pacman -S obs-studio
+```
+#### Java
+```
+$ sudo pacman -S jdk-openjdk
+```
+#### MySQL
+```
+$ sudo pacman -S mariadb
+$ sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+$ sudo systemctl enable mariadb.service && sudo systemctl start mariadb.service
+$ sudo mysql_secure_installation
+$ mysql -u root -p
+MariaDB> CREATE USER 'zerdicorp'@'localhost' IDENTIFIED BY 'Qwerty123';
 MariaDB> GRANT ALL PRIVILEGES ON mydb.* TO 'zerdicorp'@'localhost';
 MariaDB> FLUSH PRIVILEGES;
-MariaDB> quit
+MariaDB> quit;
 ```
