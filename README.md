@@ -207,7 +207,7 @@ MariaDB> GRANT ALL PRIVILEGES ON mydb.* TO 'zerdicorp'@'localhost';
 MariaDB> FLUSH PRIVILEGES;
 MariaDB> quit;
 ```
-#### Conclusion
+#### End of setup
 ```
 reboot
 ```
