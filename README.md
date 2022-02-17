@@ -76,3 +76,11 @@ exec i3
 - [alt + enter]
 - paru -S google-chrome > [ENTER, Y, q, Y] > enter password > [Y]
 ***
+- curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+- vim
+```
+:PlugInstall
+```
+- sudo pacman -S bash-completion pulseaudio pulseaudio-alsa pulseaudio-jack
+- reboot
+- paru -S spotify
