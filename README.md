@@ -124,7 +124,7 @@ Include = /etc/pacman.d/mirrorlist
 ```
 #### Some tools
 ```
-$ sudo pacman -S bash-completion git maim brightnessctl tree openssh zip unzip
+$ sudo pacman -S bash-completion git brightnessctl tree openssh zip unzip
 ```
 #### Video card packages
 ```
@@ -212,6 +212,11 @@ MariaDB> CREATE USER 'zerdicorp'@'localhost' IDENTIFIED BY 'Qwerty123';
 MariaDB> GRANT ALL PRIVILEGES ON mydb.* TO 'zerdicorp'@'localhost';
 MariaDB> FLUSH PRIVILEGES;
 MariaDB> quit;
+```
+
+#### Screenshots
+```
+$ paru -S maim
 ```
 #### End of setup
 ```
