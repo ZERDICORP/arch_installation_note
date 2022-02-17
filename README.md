@@ -59,9 +59,6 @@ harch
 - reboot
 - sudo nmcli device wifi connect <SSID> password <password>
 - sudo vim /etc/pacman.conf (uncomment `[multilib]` and next line)
-- sudo pacman -Syu git openssh
-- scp zerdicorp@188.187.188.37:~/load_AIG .
-***
 - sudo pacman -S lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader xorg-server xorg-xinit i3wm i3status dmenu rxvt-unicode
 - install paru:
   - git clone https://aur.archlinux.org/paru.git
@@ -73,6 +70,9 @@ harch
 ```
 exec i3
 ```
+- git clone https://ZERDICORP:<token>@github.com/ZERDICORP/arch_config.git
+- cp -r arch_config/. . && rm -rf arch_config
 - startx
 - [alt + enter]
 - paru -S google-chrome > [ENTER, Y, q, Y] > enter password > [Y]
+***
