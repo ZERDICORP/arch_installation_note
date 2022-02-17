@@ -175,7 +175,6 @@ $ vim
 #### Sound settings
 ```
 $ sudo pacman -S pulseaudio pulseaudio-alsa pulseaudio-jack alsa-utils
-$ reboot
 $ alsamixer
 <F5>
 check microphone volume 
@@ -207,4 +206,8 @@ MariaDB> CREATE USER 'zerdicorp'@'localhost' IDENTIFIED BY 'Qwerty123';
 MariaDB> GRANT ALL PRIVILEGES ON mydb.* TO 'zerdicorp'@'localhost';
 MariaDB> FLUSH PRIVILEGES;
 MariaDB> quit;
+```
+#### Conclusion
+```
+reboot
 ```
