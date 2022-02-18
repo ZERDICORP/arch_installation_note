@@ -165,7 +165,7 @@ $ git clone https://ZERDICORP:<token>@github.com/ZERDICORP/arch_bash_tools.git
 $ mv arch_bash_tools/* Binary/ && rm -rf arch_bash_tools
 $ cd Coding
 $ git clone https://ZERDICORP:<token>@github.com/ZERDICORP/kpass__client.git
-$ cd kpass__client && mkbin
+$ cd kpass__client/src && ./mkbin
 ```
 #### Google chrome
 ```
