@@ -68,9 +68,9 @@ FONT=cyr-sun16
 $ vim /etc/hostname
 harch
 $ vim /etc/hosts
-127.0.0.1	localhost
+127.0.0.1 localhost
 ::1       localhost
-127.0.1.1	harch.localdomain	harch
+127.0.0.1 harch.localdomain harch
 ```
 #### Initramfs
 ```
@@ -110,8 +110,7 @@ $ exit
 ```
 #### Connect to wifi
 ```
-$ sudo systemctl enable NetworkManager
-$ reboot
+$ sudo systemctl enable/start NetworkManager
 $ sudo nmcli device wifi connect <SSID> password Qwerty123
 ```
 #### Allow pacman multilib
@@ -205,7 +204,7 @@ $ sudo pacman -S jdk-openjdk
 ```
 $ sudo pacman -S mariadb
 $ sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
-$ sudo systemctl enable mariadb.service && sudo systemctl start mariadb.service
+$ sudo systemctl enable/start mariadb.service
 $ sudo mysql_secure_installation
 $ mysql -u root -p
 MariaDB> CREATE USER 'zerdicorp'@'localhost' IDENTIFIED BY 'Qwerty123';
