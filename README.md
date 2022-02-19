@@ -159,6 +159,10 @@ Include = /etc/pacman.d/mirrorlist
 $ sudo systemctl enable/start NetworkManager
 $ sudo nmcli device wifi connect <SSID> password Qwerty123
 ```
+#### Git
+```
+$ sudo pacman -Syu git
+```
 #### Aur helper
 ```
 $ git clone https://aur.archlinux.org/paru.git
@@ -170,7 +174,7 @@ $ sudo pacman -S lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader 
 ```
 #### Toolbox
 ```
-$ sudo pacman -S bash-completion git xclip brightnessctl zip unzip openssh tree jdk-openjdk obs-studio telegram-desktop rxvt-unicode urxvt-perls
+$ sudo pacman -S bash-completion xclip brightnessctl zip unzip openssh tree jdk-openjdk obs-studio telegram-desktop rxvt-unicode urxvt-perls
 $ paru -S maim spotify google-chrome
 ```
 #### My configs
