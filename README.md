@@ -23,6 +23,7 @@
     - [New user](#new-user)
     - [Allow pacman multilib](#allow-pacman-multilib)
     - [Connect to wifi](#connect-to-wifi)
+    - [Git](#git)
     - [Aur helper](#aur-helper)
     - [Video acceleration packages](#video-acceleration-packages)
     - [Toolbox](#toolbox)
@@ -184,7 +185,7 @@ $ cp -r arch_config/. . && rm -rf arch_config
 ```
 #### Window manager
 ```
-$ sudo pacman -S xorg-server xorg-xinit i3wm i3status dmenu
+$ sudo pacman -S xorg-server xorg-xinit i3-wm i3status dmenu
 $ paru -S nerd-fonts-hack
 $ echo exec i3 >> .xinitrc
 $ startx
