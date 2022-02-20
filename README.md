@@ -187,7 +187,6 @@ $ cp -r arch_config/. . && rm -rf arch_config
 ```
 $ sudo pacman -S xorg-server xorg-xinit i3-wm i3status dmenu
 $ paru -S nerd-fonts-hack
-$ echo exec i3 >> .xinitrc
 $ startx
 ```
 #### My tools
@@ -197,12 +196,12 @@ $ mv arch_bash_tools/* Binary/ && rm -rf arch_bash_tools
 ```
 #### Password storage utility
 ```
-$ cd Coding && git clone https://github.com/ZERDICORP/kpass__client.git
+$ cd ~/Coding && git clone https://github.com/ZERDICORP/kpass__client.git
 $ cd ~/Coding/kpass__client/src && ./build && cd ../build && ./mkbin
 ```
 #### Tool to open a new terminal in the current directory
 ```
-$ cd Downloads && curl -LO https://github.com/schischi/xcwd/archive/master.zip && unzip master.zip
+$ cd ~/Downloads && curl -LO https://github.com/schischi/xcwd/archive/master.zip && unzip master.zip
 $ cd xcwd-master && make && sudo make install
 $ cd .. && rm -rf xcwd-master master.zip
 ```
@@ -227,9 +226,11 @@ MariaDB> quit;
 #### Sound
 ```
 $ sudo pacman -S pulseaudio pulseaudio-alsa pulseaudio-jack alsa-utils
+```
+> Check volume after reboot
+```
 $ alsamixer
 <F5>
-check volume 
 ```
 #### End of setup
 ```
