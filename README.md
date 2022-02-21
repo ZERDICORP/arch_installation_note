@@ -71,7 +71,7 @@ $ mount /dev/<EFI_partion> /mnt/boot/EFI
 ```
 #### Base system setup
 ```
-$ pacstrap -i /mnt base base-devel linux-zen linux-zen-headers linux-firmware dosfstools btrfs-progs amd-ucode vim
+$ pacstrap -i /mnt base base-devel linux-zen linux-zen-headers linux-firmware dosfstools btrfs-progs amd-ucode vim tmux
 ```
 #### Partition config generation
 ```
@@ -175,7 +175,7 @@ $ sudo pacman -S lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader 
 ```
 #### Toolbox
 ```
-$ sudo pacman -S bash-completion xclip brightnessctl zip unzip openssh tree jdk-openjdk obs-studio telegram-desktop rxvt-unicode urxvt-perls
+$ sudo pacman -S bash-completion xclip brightnessctl zip unzip openssh tree jdk-openjdk obs-studio telegram-desktop rxvt-unicode urxvt-perls viu
 $ paru -S maim spotify google-chrome
 ```
 #### My configs
@@ -217,11 +217,6 @@ $ sudo pacman -S mariadb
 $ sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 $ sudo systemctl enable/start mariadb.service
 $ sudo mysql_secure_installation
-$ mysql -u root -p
-MariaDB> CREATE USER 'zerdicorp'@'localhost' IDENTIFIED BY 'Qwerty123';
-MariaDB> GRANT ALL PRIVILEGES ON mydb.* TO 'zerdicorp'@'localhost';
-MariaDB> FLUSH PRIVILEGES;
-MariaDB> quit;
 ```
 #### Sound
 ```
