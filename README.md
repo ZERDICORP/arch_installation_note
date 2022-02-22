@@ -15,8 +15,7 @@
     - [Network settings](#network-settings)
     - [Initramfs](#initramfs)
     - [Root password](#root-password)
-    - [Bootloader](#bootloader)
-    - [Network utilities](#network-utilities)
+    - [Bootloader & Network utilities](#bootloader--network-utilities)
     - [End of installation](#end-of-installation)
 - [Part II ~ «System setup» :wrench:](#part-ii--system-setup-wrench)
     - [New user](#new-user)
@@ -67,7 +66,7 @@ $ mount /dev/<EFI_partion> /mnt/boot/EFI
 ```
 #### Base system setup
 ```
-$ pacstrap -i /mnt base base-devel linux-zen linux-zen-headers linux-firmware dosfstools btrfs-progs amd-ucode vim tmux
+$ pacstrap -i /mnt base base-devel linux-zen linux-zen-headers linux-firmware dosfstools btrfs-progs amd-ucode vim tmux git bash-completion
 ```
 #### Partition config generation
 ```
@@ -116,15 +115,11 @@ $ mkinitcpio -P
 $ passwd
 Qwerty123
 ```
-#### Bootloader
+#### Bootloader & Network utilities
 ```
-$ pacman -S grub efibootmgr
+$ pacman -S grub efibootmgr dhcpcd dhclient networkamanager 
 $ grub-install /dev/<disk>
 $ grub-mkconfig -o /boot/grub/grub.cfg
-```
-#### Network utilities
-```
-$ pacman -S dhcpcd dhclient networkamanager git bash-completion
 ```
 #### End of installation
 ```
