@@ -162,7 +162,7 @@ $ paru -S nerd-fonts-hack maim spotify google-chrome
 ```
 #### Toolbox: pacman
 ```
-$ sudo pacman -S lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader xclip brightnessctl zip unzip openssh tree jdk-openjdk obs-studio telegram-desktop rxvt-unicode urxvt-perls viu pulseaudio pulseaudio-alsa pulseaudio-jack alsa-utils xorg-server xorg-xinit i3-wm i3status dmenu
+$ sudo pacman -S lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader xclip brightnessctl zip unzip openssh tree jdk-openjdk obs-studio telegram-desktop rxvt-unicode urxvt-perls viu pulseaudio pulseaudio-alsa pulseaudio-jack alsa-utils xorg-server xorg-xinit i3-wm i3status dmenu noto-fonts-emoji python-pip
 ```
 #### MySQL
 ```
