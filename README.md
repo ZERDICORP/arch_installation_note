@@ -18,23 +18,19 @@
     - [Bootloader](#bootloader)
     - [Network utilities](#network-utilities)
     - [End of installation](#end-of-installation)
-
 - [Part II ~ «System setup» :wrench:](#part-ii--system-setup-wrench)
     - [New user](#new-user)
     - [Allow pacman multilib](#allow-pacman-multilib)
     - [Connect to wifi](#connect-to-wifi)
-    - [Git](#git)
     - [Aur helper](#aur-helper)
-    - [Video acceleration packages](#video-acceleration-packages)
-    - [Toolbox](#toolbox)
+    - [Toolbox: paru](#toolbox-paru)
+    - [Toolbox: pacman](#toolbox-pacman)
+    - [MySQL](#mysql)
     - [My configs](#my-configs)
-    - [Window manager](#window-manager)
     - [My tools](#my-tools)
     - [Password storage utility](#password-storage-utility)
-    - [Tool to open a new terminal in the current directory](#tool-to-open-a-new-terminal-in-the-current-directory)
+    - [Tool to open new terminal in the same directory](#tool-to-open-new-terminal-in-the-same-directory)
     - [Vim Plugin Manager](#vim-plugin-manager)
-    - [MySQL](#mysql)
-    - [Sound](#sound)
     - [End of setup](#end-of-setup)
 
 ## Part I ~ «System installation» :hammer:
@@ -128,7 +124,7 @@ $ grub-mkconfig -o /boot/grub/grub.cfg
 ```
 #### Network utilities
 ```
-$ pacman -S dhcpcd dhclient networkamanager
+$ pacman -S dhcpcd dhclient networkamanager git bash-completion
 ```
 #### End of installation
 ```
@@ -160,34 +156,30 @@ Include = /etc/pacman.d/mirrorlist
 $ sudo systemctl enable/start NetworkManager
 $ sudo nmcli device wifi connect <SSID> password Qwerty123
 ```
-#### Git
-```
-$ sudo pacman -Syu git
-```
 #### Aur helper
 ```
 $ git clone https://aur.archlinux.org/paru.git
 $ cd paru && makepkg -si && cd .. && rm -rf paru
 ```
-#### Video acceleration packages
+#### Toolbox: paru
 ```
-$ sudo pacman -S lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader
+$ paru -S nerd-fonts-hack maim spotify google-chrome
 ```
-#### Toolbox
+#### Toolbox: pacman
 ```
-$ sudo pacman -S bash-completion xclip brightnessctl zip unzip openssh tree jdk-openjdk obs-studio telegram-desktop rxvt-unicode urxvt-perls viu
-$ paru -S maim spotify google-chrome
+$ sudo pacman -S lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader xclip brightnessctl zip unzip openssh tree jdk-openjdk obs-studio telegram-desktop rxvt-unicode urxvt-perls viu pulseaudio pulseaudio-alsa pulseaudio-jack alsa-utils xorg-server xorg-xinit i3-wm i3status dmenu
+```
+#### MySQL
+```
+$ sudo pacman -S mariadb
+$ sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+$ sudo systemctl enable/start mariadb.service
+$ sudo mysql_secure_installation
 ```
 #### My configs
 ```
 $ git clone https://github.com/ZERDICORP/arch_config.git
 $ cp -r arch_config/. . && rm -rf arch_config
-```
-#### Window manager
-```
-$ sudo pacman -S xorg-server xorg-xinit i3-wm i3status dmenu
-$ paru -S nerd-fonts-hack
-$ startx
 ```
 #### My tools
 ```
@@ -199,7 +191,7 @@ $ mv arch_bash_tools/* Binary/ && rm -rf arch_bash_tools
 $ cd ~/Coding && git clone https://github.com/ZERDICORP/kpass__client.git
 $ cd ~/Coding/kpass__client/src && ./build && cd ../build && ./mkbin
 ```
-#### Tool to open a new terminal in the current directory
+#### Tool to open new terminal in the same directory
 ```
 $ cd ~/Downloads && curl -LO https://github.com/schischi/xcwd/archive/master.zip && unzip master.zip
 $ cd xcwd-master && make && sudo make install
@@ -210,22 +202,6 @@ $ cd .. && rm -rf xcwd-master master.zip
 $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 $ vim
 :PlugInstall
-```
-#### MySQL
-```
-$ sudo pacman -S mariadb
-$ sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
-$ sudo systemctl enable/start mariadb.service
-$ sudo mysql_secure_installation
-```
-#### Sound
-```
-$ sudo pacman -S pulseaudio pulseaudio-alsa pulseaudio-jack alsa-utils
-```
-> Check volume after reboot
-```
-$ alsamixer
-<F5>
 ```
 #### End of setup
 ```
