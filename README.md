@@ -91,6 +91,11 @@ en_US.UTF-8 UTF-8
 ru_RU.UTF-8 UTF-8
 ...
 $ locale-gen
+$ vim /etc/locale.conf
+LANG=en_US.UTF-8
+$ vim /etc/vconsole.conf
+KEYMAP=en
+FONT=cyr-sun16
 ```
 #### Network settings
 ```
