@@ -173,6 +173,7 @@ $ sudo mysql_secure_installation
 ```
 #### My configs
 ```
+$ mkdir Binary Coding
 $ git clone https://github.com/ZERDICORP/arch_config.git
 $ cp -r arch_config/. . && rm -rf arch_config
 ```
