@@ -154,19 +154,19 @@ $ sudo nmcli device wifi connect <SSID> password Qwerty123
 #### Aur helper
 ```
 $ git clone https://aur.archlinux.org/paru.git
+$ sudo pacman -Syu
 $ cd paru && makepkg -si && cd .. && rm -rf paru
 ```
 #### Toolbox: paru
 ```
-$ paru -S nerd-fonts-hack maim spotify google-chrome
+$ paru -S nerd-fonts-hack maim spotify google-chrome postman
 ```
 #### Toolbox: pacman
 ```
-$ sudo pacman -S lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader xclip brightnessctl zip unzip openssh tree jdk-openjdk obs-studio telegram-desktop rxvt-unicode urxvt-perls viu pulseaudio pulseaudio-alsa pulseaudio-jack alsa-utils xorg-server xorg-xinit i3-wm i3status dmenu noto-fonts-emoji python-pip htop
+$ sudo pacman -S lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader xclip brightnessctl zip unzip openssh tree jdk-openjdk obs-studio telegram-desktop rxvt-unicode urxvt-perls viu pulseaudio pulseaudio-alsa pulseaudio-jack alsa-utils xorg-server xorg-xinit i3-wm i3status dmenu noto-fonts-emoji python-pip htop mariadb
 ```
 #### MySQL
 ```
-$ sudo pacman -S mariadb
 $ sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 $ sudo systemctl enable/start mariadb.service
 $ sudo mysql_secure_installation
