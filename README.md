@@ -46,7 +46,7 @@ $ ping google.com
 ```
 #### Disk partitioning
 ```
-$ fsdisk -l
+$ fdisk -l
 $ cfdisk /dev/<disk>
 New ~ 300M; Type ~ EFI System;
 New ~ <all other>; Type ~ Linux filesystem;
