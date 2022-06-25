@@ -202,10 +202,7 @@ $ vim
 ```
 #### VPN
 ```
-$ cd ~/.vpn/remote
-$ chmod +x load
-$ ./load
-$ cd ..
+$ cd ~/.vpn/remote && chmod +x load && ./load && cd ..
 $ vi login.conf
 # add your openvpn login and password here
 ```
