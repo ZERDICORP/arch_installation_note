@@ -118,7 +118,7 @@ Qwerty123
 ```
 #### Bootloader & Network utilities
 ```
-$ pacman -S grub efibootmgr dhcpcd dhclient networkamanager 
+$ pacman -S grub efibootmgr dhcpcd dhclient networkmanager 
 $ grub-install /dev/<disk>
 $ grub-mkconfig -o /boot/grub/grub.cfg
 ```
