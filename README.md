@@ -160,7 +160,7 @@ $ cd paru && makepkg -si && cd .. && rm -rf paru
 ```
 #### Toolbox: paru
 ```
-$ paru -S nerd-fonts-hack maim spotify google-chrome postman
+$ paru -S nerd-fonts-hack maim google-chrome postman
 ```
 #### Toolbox: pacman
 ```
