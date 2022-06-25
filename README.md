@@ -30,6 +30,7 @@
     - [Password storage utility](#password-storage-utility)
     - [Tool to open new terminal in the same directory](#tool-to-open-new-terminal-in-the-same-directory)
     - [Vim Plugin Manager](#vim-plugin-manager)
+    - [VPN](#vpn)
     - [End of setup](#end-of-setup)
 
 ## Part I ~ «System installation» :hammer:
@@ -198,6 +199,15 @@ $ cd .. && rm -rf xcwd-master master.zip
 $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 $ vim
 :PlugInstall
+```
+#### VPN
+```
+$ cd ~/.vpn/remote
+$ chmod +x load
+$ ./load
+$ cd ..
+$ vi login.conf
+# add your openvpn login and password here
 ```
 #### End of setup
 ```
