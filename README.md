@@ -208,5 +208,5 @@ $ vi login.conf
 ```
 #### End of setup
 ```
-reboot
+$ reboot
 ```
